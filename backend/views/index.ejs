@@ -1,0 +1,101 @@
+<%- include('header'); -%>
+  
+    <div id="js-cookie-box" class="cookie-box cookie-box--hide">
+        En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies 🍪 ! <span id="js-cookie-button" class="cookie-button">Allez pourquoi pas</span>
+      </div>
+
+
+      <div class="pop-up-profil">
+        <div class="profil-close flex">
+            <span></span>
+        </div>
+        
+        <div class="photo">
+          <div class="lueur">
+          </div>
+          <span></span>
+        </div>
+        
+        <h3>Connectez vous à votre compte</h3>
+        <div class="container-input flex">
+      
+  
+      <form class="flex" action="" method="POST">
+          <input type="text" placeholder="Adresse Electronique" name="email">
+          <input type="password" placeholder="Mot de passe" name="pass">
+          <input type="submit" value="Identifiez-vous">
+      </form>
+          <a href="">Mot de passe oublié?</a>
+          
+        </div>
+        <div class="choix flex">
+          <h2>rester connecté</h2>
+          <div class="check flex">
+            <span><i class="fas fa-check"></i></span>
+          </div>
+          <span></span>
+        </div>
+        <div class="container-button flex">
+         
+          <h3>vous n'avez pas encore de compte?</h3>
+          <div class="ins">inscrivez-vous</div>
+  
+          </div>
+  
+      </div>
+
+
+
+    <div class="bienvenue row">
+        <div class="container-gauche  col s6">
+            <h1>Bienvenue !</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, doloribus distinctio mollitia consectetur, adipisicing elit. Delectus, doloribus distinctio mollitia </p>
+
+        </div>
+        <div class="container-droite col s6"></div>
+
+    </div>
+
+
+  
+
+    <div class="container">
+        <div class="row">
+            <article class="apprendre col s4">
+                    <div class="image"></div>
+                    <h2>Apprentissage</h2>
+            </article>
+            <article class="mise flex col s4">
+                <div class="image"></div>
+                <h2>Mise en pratique</h2>
+            </article>
+            <article class="certification flex col s4">
+                <div class="image"></div>
+                <h2>Certification</h2>
+             </article>
+        </div>
+    </div>
+    <div class="bg-deux"></div>
+    <div class=" deux">
+        
+        <div class="row">
+            <% cours.forEach(cours => { %>
+                <a href="cours/<%= cours.id %>">
+            <article class="cours col s4">
+                <img src=" <%= cours.urlImage %>" alt="">
+                <h2><%=cours.title %></h2>
+                <h2><%= cours.categorie %></h2>
+                <h2><%= cours.duree %></h2>
+                <p> <%= cours.contenu %></p>
+                <h3> <%= cours.prix %> </h3>
+            </article>
+        </a>
+        <% }); %>
+        </div>
+    </div>
+    <%- include('footer'); -%>
+</div>
+
+
+<script src="front.js" ></script>
+

@@ -1,0 +1,26 @@
+
+
+<%- include('header'); -%>
+
+   
+    <div class=" deux">
+        
+        <div class="row">
+            <% cours.forEach(cours => { %>
+                <article class="cours col s4">
+                    <img src=" <%= cours.urlImage %>" alt="">
+                    <h2><%=cours.title %></h2>
+                    <h2><%= cours.categorie %></h2>
+                    <h2><%= cours.duree %></h2>
+                    <p> <%= cours.contenu %></p>
+                    <h3> <%= cours.prix %> </h3>
+                </article>
+            <% }); %>
+        </div>
+    </div>
+
+  
+    <%- include('footer'); -%>
+  
+
+
