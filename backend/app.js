@@ -49,8 +49,8 @@ app.use(express.static('public'));
 app.use('/', formationsRoutes);
 app.use('/liste', formationsRoutes);
 // !!! créer la route "auth" dans le front !!!
-app.use('/auth/login', userLogin);
-app.use('/auth/signup', userSignup);
+app.use('/contact/login', userLogin);
+app.use('/contact/signup', userSignup);
 // app.use('/auth', userRoutes);
 
 

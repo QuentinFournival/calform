@@ -28,6 +28,12 @@ router.get('/', (req, res, next) => {
         
 });
 
+router.get('/liste', (req, res, next) => {
+    Cours.find()
+        .then(cours => res.render('liste', {cours : cours}))
+        .catch(error => res.status(404).json({ error }));
+});
+
 // permet de récupérer un objet précis par son ID avec "FINDONE"
 router.get('/cours/:id', (req, res, next) => {
     Cours.findOne({ _id: req.params.id })
